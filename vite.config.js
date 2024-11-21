@@ -5,7 +5,12 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
+
 export default defineConfig({
+  base: 'flask_dome',
+  build: {
+    outDir: 'dist', // 构建输出目录
+  },
   server: {
     proxy: {
       '/api': {
